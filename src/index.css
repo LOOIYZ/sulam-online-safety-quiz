@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #FAF8F5;
+    color: #1E293B;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* Print styles for digital certificate */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #certificate-print-area, #certificate-print-area * {
+    visibility: visible;
+  }
+  #certificate-print-area {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    border: none;
+  }
+}
+
+/* Custom subtle card shadows */
+.card-shadow {
+  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
+}
+
+.hero-pattern {
+  background-color: #FAF8F5;
+  background-image: radial-gradient(#E2E8F0 1.2px, transparent 1.2px), radial-gradient(#E2E8F0 1.2px, #FAF8F5 1.2px);
+  background-size: 24px 24px;
+  background-position: 0 0, 12px 12px;
+}
