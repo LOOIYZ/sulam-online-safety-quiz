@@ -86,17 +86,17 @@ export default function ResultsScreen({
         {/* Score Circles Grid */}
         <div className="grid grid-cols-3 gap-3 max-w-md mx-auto mb-6">
           <div className="bg-slate-50 p-3.5 rounded-2xl border border-slate-200">
-            <span className="text-[11px] font-bold text-slate-500 block mb-1">{t.finalScoreLabel}</span>
+            <span className="text-xs font-bold text-slate-500 block mb-1">{t.finalScoreLabel}</span>
             <span className="text-xl sm:text-2xl font-black text-amber-600">{score} / {total}</span>
           </div>
 
           <div className="bg-slate-50 p-3.5 rounded-2xl border border-slate-200">
-            <span className="text-[11px] font-bold text-slate-500 block mb-1">{t.accuracyLabel}</span>
+            <span className="text-xs font-bold text-slate-500 block mb-1">{t.accuracyLabel}</span>
             <span className="text-xl sm:text-2xl font-black text-slate-800">{percentage}%</span>
           </div>
 
           <div className="bg-slate-50 p-3.5 rounded-2xl border border-slate-200">
-            <span className="text-[11px] font-bold text-slate-500 block mb-1">{t.correctAnswersCount}</span>
+            <span className="text-xs font-bold text-slate-500 block mb-1">{t.correctAnswersCount}</span>
             <span className="text-xl sm:text-2xl font-black text-emerald-600">{score}</span>
           </div>
         </div>
@@ -214,7 +214,7 @@ export default function ResultsScreen({
                   <p className="font-medium text-slate-700 mb-1.5">
                     {q.question[lang] || q.question.ms}
                   </p>
-                  <div className="text-[11px] text-slate-600 pt-1 border-t border-slate-200/60">
+                  <div className="text-xs text-slate-600 pt-1 border-t border-slate-200/60">
                     <strong>Jawapan Tepat:</strong> {correctOpt?.text[lang] || correctOpt?.text.ms}
                   </div>
                 </div>

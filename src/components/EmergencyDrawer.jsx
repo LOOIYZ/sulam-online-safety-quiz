@@ -30,7 +30,7 @@ export default function EmergencyDrawer({ isOpen, onClose, t, lang }) {
               <h2 className="text-lg font-extrabold text-slate-900 leading-tight">
                 {t.emergencyDrawerTitle}
               </h2>
-              <span className="text-xs text-red-600 font-bold uppercase tracking-wider">
+              <span className="text-xs text-red-600 font-bold tracking-wider">
                 Bukan 999 atau 994 — Dail 997 Segera!
               </span>
             </div>
@@ -64,7 +64,7 @@ export default function EmergencyDrawer({ isOpen, onClose, t, lang }) {
             </span>
             <div>
               <h4 className="text-xs font-extrabold text-red-950 mb-0.5">{t.step1Title}</h4>
-              <p className="text-[11px] text-red-800 leading-relaxed">{t.step1Desc}</p>
+              <p className="text-xs text-red-800 leading-relaxed">{t.step1Desc}</p>
             </div>
           </div>
 
@@ -74,7 +74,7 @@ export default function EmergencyDrawer({ isOpen, onClose, t, lang }) {
             </span>
             <div>
               <h4 className="text-xs font-extrabold text-amber-950 mb-0.5">{t.step2Title}</h4>
-              <p className="text-[11px] text-amber-800 leading-relaxed">{t.step2Desc}</p>
+              <p className="text-xs text-amber-800 leading-relaxed">{t.step2Desc}</p>
             </div>
           </div>
 
@@ -84,7 +84,7 @@ export default function EmergencyDrawer({ isOpen, onClose, t, lang }) {
             </span>
             <div>
               <h4 className="text-xs font-extrabold text-blue-950 mb-0.5">{t.step3Title}</h4>
-              <p className="text-[11px] text-blue-800 leading-relaxed">{t.step3Desc}</p>
+              <p className="text-xs text-blue-800 leading-relaxed">{t.step3Desc}</p>
             </div>
           </div>
         </div>
@@ -98,7 +98,7 @@ export default function EmergencyDrawer({ isOpen, onClose, t, lang }) {
           <p className="text-slate-300 leading-relaxed mb-2">
             Buka aplikasi Telegram serta-merta:
           </p>
-          <div className="p-2.5 bg-slate-800 rounded-xl font-mono text-[11px] text-amber-300 border border-slate-700">
+          <div className="p-2.5 bg-slate-800 rounded-xl font-mono text-xs text-amber-300 border border-slate-700">
             Settings &gt; Devices &gt; Terminate All Other Sessions
           </div>
         </div>

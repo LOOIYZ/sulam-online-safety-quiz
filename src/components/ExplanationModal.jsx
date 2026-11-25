@@ -49,16 +49,13 @@ export default function ExplanationModal({
             }`}>
               {isCorrect ? t.correctTitle : t.incorrectTitle}
             </h3>
-            <span className="text-xs text-slate-500 font-medium">
-              {question.slideRef}
-            </span>
           </div>
         </div>
 
         {/* If wrong, display correct answer */}
         {!isCorrect && correctOption && (
           <div className="bg-emerald-50 rounded-2xl p-3.5 border border-emerald-200 mb-4">
-            <div className="text-[11px] font-bold text-emerald-800 uppercase tracking-wide mb-1 flex items-center gap-1">
+            <div className="text-xs font-bold text-emerald-800 tracking-wide mb-1 flex items-center gap-1">
               <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
               {t.correctAnswerWas}
             </div>
@@ -70,7 +67,7 @@ export default function ExplanationModal({
 
         {/* Why this matters (Pedagogical Explanation) */}
         <div className="bg-slate-50 rounded-2xl p-4 border border-slate-200 mb-4">
-          <div className="text-xs font-bold text-slate-700 uppercase tracking-wide mb-1.5 flex items-center gap-1.5">
+          <div className="text-xs font-bold text-slate-700 tracking-wide mb-1.5 flex items-center gap-1.5">
             <BookOpen className="w-3.5 h-3.5 text-amber-600" />
             {t.whyItMatters}
           </div>
@@ -81,7 +78,7 @@ export default function ExplanationModal({
 
         {/* Golden Safety Tip from Presentation */}
         <div className="bg-amber-50 rounded-2xl p-4 border border-amber-200 mb-6">
-          <div className="text-xs font-bold text-amber-900 uppercase tracking-wide mb-1 flex items-center gap-1.5">
+          <div className="text-xs font-bold text-amber-900 tracking-wide mb-1 flex items-center gap-1.5">
             <Lightbulb className="w-4 h-4 text-amber-600" />
             {t.goldenTip}
           </div>

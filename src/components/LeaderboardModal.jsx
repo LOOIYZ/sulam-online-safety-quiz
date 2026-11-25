@@ -36,7 +36,7 @@ export default function LeaderboardModal({
               <h3 className="text-base font-extrabold text-slate-900">
                 {t.leaderboardTitle}
               </h3>
-              <span className="text-[11px] text-slate-500 font-medium">
+              <span className="text-xs text-slate-500 font-medium">
                 PPR Pantai Ria Blok C • SULAM Bootcamp
               </span>
             </div>
@@ -102,7 +102,7 @@ export default function LeaderboardModal({
                       <div className="font-extrabold text-slate-900 truncate">
                         {entry.name}
                       </div>
-                      <div className="text-[10px] text-slate-400">
+                      <div className="text-xs text-slate-500">
                         {entry.date}
                       </div>
                     </div>
@@ -112,8 +112,10 @@ export default function LeaderboardModal({
                     <span className="font-extrabold text-amber-600 text-sm">
                       {entry.score} / {entry.total}
                     </span>
-                    <span className="text-[10px] text-slate-500 block">
-                      ({entry.percentage}%)
+                    <span className="text-xs text-slate-600 block">
+                      {entry.timeSec != null
+                        ? `${Math.floor(entry.timeSec / 60)}:${String(entry.timeSec % 60).padStart(2, '0')}`
+                        : `${entry.percentage}%`}
                     </span>
                   </div>
                 </div>
@@ -127,7 +129,7 @@ export default function LeaderboardModal({
           {records.length > 0 && (
             <button
               onClick={handleClear}
-              className="text-[11px] text-red-600 hover:text-red-700 flex items-center gap-1 font-semibold"
+              className="text-xs text-red-600 hover:text-red-700 flex items-center gap-1 font-semibold"
             >
               <Trash2 className="w-3.5 h-3.5" />
               <span>{t.clearRecords}</span>

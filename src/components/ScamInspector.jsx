@@ -21,7 +21,7 @@ export default function ScamInspector({ scenarioType, scenarioData, lang }) {
   if (scenarioType === 'call_mockup') {
     return (
       <div className="my-4 bg-slate-900 text-white rounded-2xl p-4 sm:p-5 border border-red-500/30 shadow-lg relative overflow-hidden">
-        <div className="absolute top-2 right-2 bg-red-600/90 text-white text-[10px] font-extrabold px-2 py-0.5 rounded uppercase tracking-wider flex items-center gap-1">
+        <div className="absolute top-2 right-2 bg-red-600/90 text-white text-xs font-extrabold px-2 py-0.5 rounded tracking-wider flex items-center gap-1">
           <AlertOctagon className="w-3 h-3" />
           <span>SIMULASI PANGGILAN PALSU</span>
         </div>
@@ -31,7 +31,7 @@ export default function ScamInspector({ scenarioType, scenarioData, lang }) {
             <PhoneCall className="w-5 h-5 text-red-400 animate-pulse" />
           </div>
           <div className="flex-1 min-w-0">
-            <div className="text-xs text-red-400 font-bold uppercase tracking-wider">
+            <div className="text-xs text-red-400 font-bold tracking-wider">
               {lang === 'ms' ? 'Pemanggil Tidak Dikenali' : 'Incoming Caller'}
             </div>
             <div className="text-sm font-extrabold text-white truncate">
@@ -40,7 +40,7 @@ export default function ScamInspector({ scenarioType, scenarioData, lang }) {
             <div className="text-xs text-slate-300 mt-2 bg-slate-800/80 p-2.5 rounded-xl border border-slate-700 italic">
               "{scenarioData.dialogue}"
             </div>
-            <div className="mt-2.5 flex items-center gap-2 text-[11px] text-amber-300 font-semibold">
+            <div className="mt-2.5 flex items-center gap-2 text-xs text-amber-300 font-semibold">
               <Clock className="w-3.5 h-3.5 text-amber-400" />
               <span>{scenarioData.urgency}</span>
             </div>
@@ -54,12 +54,12 @@ export default function ScamInspector({ scenarioType, scenarioData, lang }) {
   if (scenarioType === 'sms_apk_mockup') {
     return (
       <div className="my-4 bg-slate-100 rounded-2xl p-4 border border-slate-300 shadow-inner">
-        <div className="text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-2 flex items-center justify-between">
+        <div className="text-xs font-bold text-slate-500 tracking-wider mb-2 flex items-center justify-between">
           <span className="flex items-center gap-1">
             <MessageSquare className="w-3.5 h-3.5 text-blue-600" />
             Mesej WhatsApp / SMS Diterima
           </span>
-          <span className="text-red-600 font-extrabold bg-red-100 px-1.5 py-0.5 rounded text-[10px]">
+          <span className="text-red-600 font-extrabold bg-red-100 px-1.5 py-0.5 rounded text-xs">
             AWAS! SCAM APK
           </span>
         </div>
@@ -79,12 +79,12 @@ export default function ScamInspector({ scenarioType, scenarioData, lang }) {
                 <div className="text-xs font-extrabold text-red-900 truncate">
                   {scenarioData.filename}
                 </div>
-                <div className="text-[10px] text-red-700">
+                <div className="text-xs text-red-700">
                   {scenarioData.filesize} • Pakej Pemasangan Luar
                 </div>
               </div>
             </div>
-            <span className="text-[10px] font-extrabold bg-red-600 text-white px-2.5 py-1 rounded-md shrink-0">
+            <span className="text-xs font-extrabold bg-red-600 text-white px-2.5 py-1 rounded-md shrink-0">
               JANGAN PASANG
             </span>
           </div>
@@ -120,7 +120,7 @@ export default function ScamInspector({ scenarioType, scenarioData, lang }) {
                 <Lock className={`w-3.5 h-3.5 ${item.status === 'real' ? 'text-emerald-400' : 'text-slate-400'}`} />
                 <span className="truncate">{item.url}</span>
               </div>
-              <span className={`text-[10px] px-2 py-0.5 rounded font-sans font-bold uppercase shrink-0 ${
+              <span className={`text-xs px-2 py-0.5 rounded font-sans font-bold shrink-0 ${
                 item.status === 'real' ? 'bg-emerald-600 text-white' : 'bg-slate-700 text-slate-300'
               }`}>
                 {item.label}
@@ -137,15 +137,15 @@ export default function ScamInspector({ scenarioType, scenarioData, lang }) {
     return (
       <div className="my-4 bg-blue-50 rounded-2xl p-4 border border-blue-200">
         <div className="flex items-center justify-between mb-2">
-          <span className="text-[11px] font-bold text-blue-900 uppercase tracking-wide">
+          <span className="text-xs font-bold text-blue-900 tracking-wide">
             {scenarioData.headline}
           </span>
-          <span className="text-[10px] font-extrabold bg-red-600 text-white px-2 py-0.5 rounded">
+          <span className="text-xs font-extrabold bg-red-600 text-white px-2 py-0.5 rounded">
             PERANGKAP HIJACK
           </span>
         </div>
         <div className="bg-white rounded-xl p-3 border border-blue-100 text-xs text-slate-700 space-y-2">
-          <div className="flex items-center justify-between text-[11px] text-slate-500 pb-1 border-b">
+          <div className="flex items-center justify-between text-xs text-slate-500 pb-1 border-b">
             <span>Poster tulis: <strong className="text-slate-800">{scenarioData.posterDomain}</strong></span>
             <span>Pautan sebenar: <strong className="text-red-600 font-mono">{scenarioData.actualLink}</strong></span>
           </div>
@@ -166,12 +166,12 @@ export default function ScamInspector({ scenarioType, scenarioData, lang }) {
             <Mic className="w-4 h-4 text-purple-400" />
             <span>{scenarioData.scenarioTitle}</span>
           </div>
-          <span className="text-[10px] font-extrabold bg-purple-600 text-white px-2 py-0.5 rounded">
+          <span className="text-xs font-extrabold bg-purple-600 text-white px-2 py-0.5 rounded">
             AI CLONING
           </span>
         </div>
         <div className="bg-slate-800/80 rounded-xl p-3 text-xs space-y-1.5 border border-slate-700">
-          <p className="text-[11px] font-bold text-slate-400 uppercase tracking-wider">
+          <p className="text-xs font-bold text-slate-400 tracking-wider">
             Tanda-tanda Amaran (Red Flags):
           </p>
           <ul className="list-disc list-inside space-y-1 text-slate-200">
@@ -188,7 +188,7 @@ export default function ScamInspector({ scenarioType, scenarioData, lang }) {
   if (scenarioType === 'hotline_dialer') {
     return (
       <div className="my-4 bg-gradient-to-r from-red-600 to-rose-700 text-white rounded-2xl p-4 text-center shadow-md">
-        <div className="text-xs font-extrabold tracking-widest uppercase text-red-200 mb-1">
+        <div className="text-xs font-extrabold tracking-widest text-red-200 mb-1">
           {scenarioData.agency}
         </div>
         <div className="text-4xl font-black tracking-widest my-1 text-white">

@@ -63,7 +63,7 @@ export default function Certificate({
 
           {/* Organizer Header */}
           <div className="mb-4">
-            <div className="text-[11px] sm:text-xs font-extrabold uppercase tracking-widest text-slate-500 mb-1">
+            <div className="text-xs sm:text-xs font-extrabold tracking-widest text-slate-500 mb-1">
               WIX2001 SULAM BOOTCAMP • UNIVERSITI MALAYA
             </div>
             <div className="text-xs sm:text-sm font-bold text-amber-700">
@@ -93,7 +93,7 @@ export default function Certificate({
           {/* Achievement Seal & Stats */}
           <div className="flex items-center justify-center gap-6 mb-8 flex-wrap">
             <div className="bg-white/80 px-4 py-2 rounded-xl border border-amber-200 shadow-sm">
-              <span className="text-[10px] font-bold text-slate-400 uppercase block">Skor Dicapai</span>
+              <span className="text-xs font-bold text-slate-400 block">Skor Dicapai</span>
               <span className="text-base font-extrabold text-amber-600">{score} / {total} ({percentage}%)</span>
             </div>
 
@@ -109,16 +109,16 @@ export default function Certificate({
               <div className="font-extrabold text-slate-900 tracking-wider">
                 BERHENTI, SEMAK, LAPOR
               </div>
-              <div className="text-[10px] text-red-600 font-bold">
+              <div className="text-xs text-red-600 font-bold">
                 Talian Kecemasan NSRC 997
               </div>
             </div>
 
             <div className="text-right">
-              <div className="text-[11px] text-slate-500 font-medium">
+              <div className="text-xs text-slate-500 font-medium">
                 {t.certDate} <strong className="text-slate-800">{currentDate}</strong>
               </div>
-              <div className="text-[10px] text-slate-400">
+              <div className="text-xs text-slate-400">
                 PPR Pantai Ria Blok C, Kuala Lumpur
               </div>
             </div>
