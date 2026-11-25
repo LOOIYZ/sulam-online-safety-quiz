@@ -8,7 +8,7 @@ import Certificate from './components/Certificate';
 import EmergencyDrawer from './components/EmergencyDrawer';
 import LeaderboardModal from './components/LeaderboardModal';
 
-import { quizQuestions } from './data/quizQuestions';
+import { quizQuestions as allQuestions } from './data/quizQuestions';
 import { translations } from './data/translations';
 import { sound } from './utils/sound';
 import { 
@@ -17,6 +17,24 @@ import {
   getSavedPreferences, 
   savePreferences 
 } from './utils/storage';
+
+function shuffle(list) {
+  const a = [...list];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+// New random question order every attempt. Answer options are shuffled too,
+// except for the link-inspector question, whose on-screen "Pilihan A-D" links
+// must stay in the same order as the options.
+function buildQuiz() {
+  return shuffle(allQuestions).map((q) =>
+    q.scenarioType === 'url_inspector' ? q : { ...q, options: shuffle(q.options) }
+  );
+}
 
 export default function App() {
   const initialPrefs = getSavedPreferences();
@@ -31,6 +49,7 @@ export default function App() {
   const [currentScreen, setCurrentScreen] = useState('welcome');
 
   // Quiz Engine State
+  const [quizQuestions, setQuizQuestions] = useState(() => buildQuiz());
   const [currentIndex, setCurrentIndex] = useState(0);
   const [score, setScore] = useState(0);
   const [streak, setStreak] = useState(0);
@@ -71,6 +90,7 @@ export default function App() {
   const handleStartQuiz = (name, mode) => {
     setPlayerName(name);
     setPlayMode(mode);
+    setQuizQuestions(buildQuiz());
     setCurrentIndex(0);
     setScore(0);
     setStreak(0);
@@ -129,6 +149,7 @@ export default function App() {
   };
 
   const handleRetakeQuiz = () => {
+    setQuizQuestions(buildQuiz());
     setCurrentIndex(0);
     setScore(0);
     setStreak(0);
