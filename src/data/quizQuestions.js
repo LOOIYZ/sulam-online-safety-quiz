@@ -383,5 +383,156 @@ export const quizQuestions = [
       ms: "Simpan kad poket 'Stop, Check, Report' di dalam dompet anda sebagai rujukan pantas seisi keluarga!",
       en: "Keep the 'Stop, Check, Report' pocket card in your wallet as a handy family reference!"
     }
+  },
+  // ===== KBAT (Kemahiran Berfikir Aras Tinggi): analyse, evaluate, prioritise =====
+  {
+    id: 13,
+    category: "kbat_voice_clone",
+    kbat: true,
+    categoryLabel: { ms: "KBAT: Suara Cucu Palsu", en: "KBAT: Fake Grandchild Voice" },
+    slideRef: "Slide 8: Deepfake AI / Suara & Wajah Palsu",
+    question: {
+      ms: "Telefon anda berbunyi. Suara seperti cucu anda menangis: \"Nenek, saya kemalangan! Tolong pindahkan RM2,000 sekarang. Jangan beritahu ibu bapa.\" Suaranya sebijik cucu anda. Apakah tindakan PALING selamat?",
+      en: "Your phone rings. A voice like your grandchild's is crying: \"Grandma, I had an accident! Please transfer RM2,000 now. Don't tell my parents.\" It sounds exactly like them. What is the SAFEST action?"
+    },
+    options: [
+      { id: "a", text: { ms: "Pindahkan wang dahulu kerana suaranya betul-betul sama", en: "Transfer first, because the voice is an exact match" }, isCorrect: false },
+      { id: "b", text: { ms: "Letak telefon, kemudian telefon cucu atau ibu bapanya guna nombor yang anda sedia ada", en: "Hang up, then call the grandchild or parents on a number you already have" }, isCorrect: true },
+      { id: "c", text: { ms: "Minta pemanggil hantar gambar kemalangan melalui WhatsApp", en: "Ask the caller to send a photo of the accident on WhatsApp" }, isCorrect: false },
+      { id: "d", text: { ms: "Tunggu pemanggil telefon semula dan tanya nama penuhnya", en: "Wait for the caller to ring back and ask for their full name" }, isCorrect: false }
+    ],
+    explanation: {
+      ms: "AI boleh meniru suara daripada rakaman pendek di media sosial, jadi suara yang sama BUKAN bukti. Tanda amaran sebenar ialah tangisan, desakan wang dan arahan 'jangan beritahu sesiapa'. Gambar dan nama boleh dipalsukan juga. Cara paling pasti ialah menyemak dengan nombor yang anda memang kenal.",
+      en: "AI can copy a voice from a short social media clip, so a matching voice is NOT proof. The real red flags are the crying, the demand for money and 'don't tell anyone'. Photos and names can be faked too. The surest check is calling a number you already know."
+    },
+    keyTip: {
+      ms: "Suara sama tidak bermakna orang sama. Letak telefon dan semak dengan nombor yang anda kenal.",
+      en: "A matching voice is not proof. Hang up and check on a number you already know."
+    }
+  },
+  {
+    id: 14,
+    category: "kbat_domain",
+    kbat: true,
+    categoryLabel: { ms: "KBAT: Baca Pautan dengan Teliti", en: "KBAT: Read the Link Carefully" },
+    slideRef: "Slide 5: Semak Pautan / Check Links First",
+    question: {
+      ms: "Seorang jiran berkata: \"Pautan ini selamat, ada gov.my.\" Pautannya: hasil.gov.my.semak-bantuan.top/str. Adakah dia betul?",
+      en: "A neighbour says: \"This link is safe, it has gov.my in it.\" The link is: hasil.gov.my.semak-bantuan.top/str. Is she right?"
+    },
+    options: [
+      { id: "a", text: { ms: "Betul, kerana ada perkataan gov.my di dalamnya", en: "Yes, because gov.my appears in it" }, isCorrect: false },
+      { id: "b", text: { ms: "Betul, kerana bermula dengan 'hasil' iaitu nama agensi kerajaan", en: "Yes, because it starts with 'hasil', a government agency name" }, isCorrect: false },
+      { id: "c", text: { ms: "Salah. Nama laman sebenar ialah bahagian hujung sebelum '/', iaitu semak-bantuan.top", en: "No. The real site is the part just before the '/', which is semak-bantuan.top" }, isCorrect: true },
+      { id: "d", text: { ms: "Salah, kerana pautan tidak boleh ada perkataan 'str'", en: "No, because a link cannot contain the word 'str'" }, isCorrect: false }
+    ],
+    explanation: {
+      ms: "Pautan dibaca dari kanan ke kiri sehingga tanda '/' pertama. Di sini laman sebenar ialah semak-bantuan.top. Perkataan 'hasil.gov.my' hanyalah hiasan yang sengaja diletakkan untuk mengelirukan. Laman rasmi berakhir dengan .gov.my sebelum '/'.",
+      en: "Read the link from the right back to the first '/'. Here the real site is semak-bantuan.top. 'hasil.gov.my' is just decoration added to confuse you. An official site ends in .gov.my right before the '/'."
+    },
+    keyTip: {
+      ms: "Lihat hujung nama laman sebelum '/'. Hanya itu yang menentukan siapa pemiliknya.",
+      en: "Look at the end of the site name just before the '/'. That alone shows who owns it."
+    }
+  },
+  {
+    id: 15,
+    category: "kbat_priority",
+    kbat: true,
+    categoryLabel: { ms: "KBAT: Susun Langkah Kecemasan", en: "KBAT: Order the Emergency Steps" },
+    slideRef: "Slide 9 & 10: Berhenti, Semak, Lapor",
+    question: {
+      ms: "Sepuluh minit lalu Pak Cik Rahman memindahkan RM5,000 kepada \"pegawai polis\" palsu. Dia baru sedar ia penipuan. Manakah urutan tindakan yang PALING betul?",
+      en: "Ten minutes ago Uncle Rahman transferred RM5,000 to a fake \"police officer\". He has just realised it is a scam. Which order of actions is BEST?"
+    },
+    options: [
+      { id: "a", text: { ms: "Padam semua mesej, kemudian tunggu esok pagi untuk lapor", en: "Delete all messages, then wait until tomorrow morning to report" }, isCorrect: false },
+      { id: "b", text: { ms: "Dail 997 serta-merta, simpan tangkapan skrin dan resit, kemudian buat laporan polis", en: "Call 997 immediately, save screenshots and the receipt, then file a police report" }, isCorrect: true },
+      { id: "c", text: { ms: "Set semula telefon dahulu, kemudian baru dail 997", en: "Factory reset the phone first, then call 997" }, isCorrect: false },
+      { id: "d", text: { ms: "Telefon semula si penipu dan minta wang dikembalikan", en: "Call the scammer back and ask for the money to be returned" }, isCorrect: false }
+    ],
+    explanation: {
+      ms: "Masa amat penting kerana akaun penipu boleh dibekukan sebelum wang dikeluarkan, jadi 997 mesti dahulu. Bukti seperti mesej dan resit diperlukan oleh polis, jadi jangan padam atau set semula telefon. Menghubungi penipu hanya membuang masa dan boleh mengundang tipu helah baru.",
+      en: "Time matters because the scammer's account can be frozen before the money is withdrawn, so 997 comes first. Police need evidence such as messages and receipts, so never delete them or reset the phone. Calling the scammer only wastes time and invites a new trick."
+    },
+    keyTip: {
+      ms: "Urutan: 997 dahulu, simpan bukti, kemudian laporan polis.",
+      en: "Order: 997 first, save evidence, then a police report."
+    }
+  },
+  {
+    id: 16,
+    category: "kbat_apk_evaluate",
+    kbat: true,
+    categoryLabel: { ms: "KBAT: Nilai Kata-kata Jiran", en: "KBAT: Judge a Neighbour's Claim" },
+    slideRef: "Slide 4: Bungkusan Palsu / Fake Parcel APK",
+    question: {
+      ms: "Mak Cik Siti memasang fail PosLaju.apk daripada WhatsApp. Dia berkata: \"Saya tak isi apa-apa maklumat, jadi selamat.\" Apakah penilaian yang betul?",
+      en: "Aunty Siti installed a PosLaju.apk file from WhatsApp. She says: \"I didn't type any details, so I'm safe.\" What is the correct judgement?"
+    },
+    options: [
+      { id: "a", text: { ms: "Selamat, kerana dia tidak mengisi sebarang borang", en: "Safe, because she did not fill in any form" }, isCorrect: false },
+      { id: "b", text: { ms: "Selamat selagi aplikasi itu tidak dibuka lagi", en: "Safe as long as the app has not been opened yet" }, isCorrect: false },
+      { id: "c", text: { ms: "Tidak selamat. Aplikasi itu boleh membaca SMS dan OTP secara senyap, jadi nyahpasang dan hubungi bank atau 997", en: "Not safe. The app can silently read SMS and OTPs, so uninstall it and contact the bank or 997" }, isCorrect: true },
+      { id: "d", text: { ms: "Tidak selamat, tetapi hanya jika telefonnya lambat", en: "Not safe, but only if the phone becomes slow" }, isCorrect: false }
+    ],
+    explanation: {
+      ms: "Perisian pencuri tidak perlu anda mengisi apa-apa. Selepas dipasang, ia boleh meminta kebenaran membaca SMS dan memintas kod OTP bank di latar belakang. Langkah segera: nyahpasang, tukar kata laluan bank dari peranti lain, dan hubungi bank atau 997.",
+      en: "Spyware does not need you to type anything. Once installed it can ask for permission to read SMS and intercept bank OTPs in the background. Act now: uninstall it, change bank passwords from another device, and contact the bank or 997."
+    },
+    keyTip: {
+      ms: "Memasang fail .apk sahaja sudah berbahaya. Jangan tunggu sehingga ada kerugian.",
+      en: "Installing an .apk alone is already dangerous. Don't wait for a loss to act."
+    }
+  },
+  {
+    id: 17,
+    category: "kbat_verify",
+    kbat: true,
+    categoryLabel: { ms: "KBAT: Cara Semak yang Betul", en: "KBAT: The Right Way to Verify" },
+    slideRef: "Slide 9: Berhenti, Semak, Lapor",
+    question: {
+      ms: "Anda menerima SMS \"bank\": \"Akaun anda akan disekat. Hubungi 03-xxxx xxxx atau klik pautan.\" Antara cara semak ini, yang manakah betul?",
+      en: "You receive a \"bank\" SMS: \"Your account will be blocked. Call 03-xxxx xxxx or tap the link.\" Which way of checking is correct?"
+    },
+    options: [
+      { id: "a", text: { ms: "Dail nombor yang tertera dalam SMS untuk bertanya", en: "Call the number shown in the SMS to ask" }, isCorrect: false },
+      { id: "b", text: { ms: "Klik pautan untuk melihat sama ada laman itu nampak seperti bank", en: "Tap the link to see if the page looks like the bank" }, isCorrect: false },
+      { id: "c", text: { ms: "Balas SMS dan minta mereka sahkan nama penuh anda", en: "Reply to the SMS and ask them to confirm your full name" }, isCorrect: false },
+      { id: "d", text: { ms: "Abaikan SMS, buka aplikasi bank sendiri atau dail nombor di belakang kad bank anda", en: "Ignore the SMS, open your own bank app or call the number on the back of your bank card" }, isCorrect: true }
+    ],
+    explanation: {
+      ms: "Nombor dan pautan dalam mesej penipu membawa anda terus kepada penipu. Laman palsu boleh dibuat nampak sama dengan bank. Sumber yang boleh dipercayai ialah yang anda cari sendiri: aplikasi rasmi atau nombor di belakang kad.",
+      en: "The number and link in a scam message lead straight to the scammer, and fake pages can look identical to a bank. A trusted source is one you find yourself: the official app or the number on your card."
+    },
+    keyTip: {
+      ms: "Semak melalui saluran yang anda cari sendiri, bukan yang mesej beri.",
+      en: "Verify through a channel you find yourself, not the one the message gives you."
+    }
+  },
+  {
+    id: 18,
+    category: "kbat_pattern",
+    kbat: true,
+    categoryLabel: { ms: "KBAT: Cari Corak Penipuan", en: "KBAT: Spot the Scam Pattern" },
+    slideRef: "Slide 3, 4 & 6: Panggilan Palsu, APK, STR Palsu",
+    question: {
+      ms: "Panggilan \"polis\" (beri masa 10 minit), mesej bungkusan (bayar hari ini) dan iklan STR (tutup dalam 1 jam). Apakah satu perkara yang SAMA pada ketiga-tiga penipuan ini, dan kenapa penipu menggunakannya?",
+      en: "A \"police\" call (10 minutes to act), a parcel message (pay today) and an STR ad (closes in 1 hour). What ONE thing do all three share, and why do scammers use it?"
+    },
+    options: [
+      { id: "a", text: { ms: "Semuanya menggunakan bahasa Inggeris supaya nampak profesional", en: "All use English so they look professional" }, isCorrect: false },
+      { id: "b", text: { ms: "Semuanya meminta wang yang sangat banyak pada mulanya", en: "All ask for a very large amount of money at first" }, isCorrect: false },
+      { id: "c", text: { ms: "Semuanya mencipta tekanan masa supaya anda tidak sempat berfikir atau menyemak", en: "All create time pressure so you have no time to think or check" }, isCorrect: true },
+      { id: "d", text: { ms: "Semuanya datang daripada nombor luar negara sahaja", en: "All come only from overseas numbers" }, isCorrect: false }
+    ],
+    explanation: {
+      ms: "Desakan masa dan rasa takut membuat otak bertindak pantas tanpa menyemak. Itulah sebabnya langkah pertama ialah BERHENTI. Apabila anda berhenti, anda ada masa untuk SEMAK dan LAPOR.",
+      en: "Time pressure and fear make people act fast without checking. That is why the first step is STOP. Once you stop, you have time to CHECK and REPORT."
+    },
+    keyTip: {
+      ms: "Jika ada desakan, itu tanda amaran. Berhenti dahulu.",
+      en: "Pressure to hurry is the warning sign. Stop first."
+    }
   }
 ];

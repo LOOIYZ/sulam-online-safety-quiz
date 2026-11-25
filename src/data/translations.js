@@ -18,7 +18,7 @@ export const translations = {
     statHotlineValue: "Hanya 7 / 13",
     
     enterNamePrompt: "Masukkan Nama Anda / Nama Kumpulan:",
-    namePlaceholder: "Cth: Blok C-08 / Pak Abu & Keluarga",
+    namePlaceholder: "Cth: Pak Abu",
     modeSolo: "Mod Individu",
     modeTeam: "Mod Pasukan / Komuniti",
     startQuizBtn: "Mula Cabaran Kuiz Sekarang",
@@ -34,7 +34,7 @@ export const translations = {
     confirmSelection: "Sahkan Jawapan",
     nextQuestion: "Soalan Seterusnya",
     viewResults: "Lihat Keputusan Penuh",
-    selectOptionPrompt: "Sila pilih satu jawapan di atas untuk meneruskan.",
+    selectOptionPrompt: "Pilih satu jawapan",
 
     // Explanation Modal
     correctTitle: "Tahniah! Jawapan Anda Tepat!",
@@ -46,7 +46,7 @@ export const translations = {
 
     // Results Screen
     resultsHeading: "Keputusan Kuiz Anda",
-    resultsSubtitle: "Tahniah kerana menamatkan 12 soalan cabaran keselamatan siber!",
+    resultsSubtitle: "Tahniah! Anda telah menamatkan semua soalan.",
     finalScoreLabel: "Skor Akhir",
     accuracyLabel: "Ketepatan",
     correctAnswersCount: "Jawapan Betul",
@@ -111,7 +111,7 @@ export const translations = {
     statHotlineValue: "Only 7 / 13",
 
     enterNamePrompt: "Enter Your Name / Team Name:",
-    namePlaceholder: "E.g.: Block C-08 / Pak Abu Family",
+    namePlaceholder: "E.g.: Pak Abu",
     modeSolo: "Solo Mode",
     modeTeam: "Team / Community Mode",
     startQuizBtn: "Start Quiz Challenge",
@@ -127,7 +127,7 @@ export const translations = {
     confirmSelection: "Confirm Answer",
     nextQuestion: "Next Question",
     viewResults: "View Full Results",
-    selectOptionPrompt: "Please select an answer above to proceed.",
+    selectOptionPrompt: "Choose an answer",
 
     // Explanation Modal
     correctTitle: "Awesome! You Got It Right!",
@@ -139,7 +139,7 @@ export const translations = {
 
     // Results Screen
     resultsHeading: "Your Quiz Results",
-    resultsSubtitle: "Congratulations on completing all 12 cybersecurity scenarios!",
+    resultsSubtitle: "Well done! You have completed every question.",
     finalScoreLabel: "Final Score",
     accuracyLabel: "Accuracy",
     correctAnswersCount: "Correct Answers",
