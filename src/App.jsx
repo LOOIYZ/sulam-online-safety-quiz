@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Header from './components/Header';
 import WelcomeScreen from './components/WelcomeScreen';
 import QuizCard from './components/QuizCard';
@@ -36,6 +36,7 @@ export default function App() {
   const [streak, setStreak] = useState(0);
   const [answersLog, setAnswersLog] = useState({});
   const [pendingAnswer, setPendingAnswer] = useState(null);
+  const startTimeRef = useRef(Date.now());
 
   // Modals
   const [isExplanationOpen, setIsExplanationOpen] = useState(false);
@@ -75,6 +76,7 @@ export default function App() {
     setStreak(0);
     setAnswersLog({});
     setPendingAnswer(null);
+    startTimeRef.current = Date.now();
     setCurrentScreen('quiz');
     sound.playClick();
   };
@@ -115,11 +117,11 @@ export default function App() {
       setCurrentIndex(prev => prev + 1);
     } else {
       // Finished all questions!
-      const finalScore = score + (pendingAnswer?.isCorrect ? 0 : 0);
       saveScoreToLeaderboard({
         name: playerName,
-        score: finalScore,
-        total: quizQuestions.length
+        score,
+        total: quizQuestions.length,
+        timeSec: Math.round((Date.now() - startTimeRef.current) / 1000)
       });
       setLeaderboardRecords(getLeaderboard());
       setCurrentScreen('results');
@@ -132,6 +134,7 @@ export default function App() {
     setStreak(0);
     setAnswersLog({});
     setPendingAnswer(null);
+    startTimeRef.current = Date.now();
     setCurrentScreen('quiz');
     sound.playClick();
   };
@@ -167,7 +170,6 @@ export default function App() {
             currentIndex={currentIndex}
             totalQuestions={quizQuestions.length}
             currentScore={score}
-            streak={streak}
             onConfirmAnswer={handleConfirmAnswer}
             t={t}
             lang={lang}
@@ -235,11 +237,6 @@ export default function App() {
         lang={lang}
       />
 
-      {/* Minimal Footer */}
-      <footer className="py-3 text-center text-[11px] text-slate-500 border-t border-slate-200/60 bg-white/70 print:hidden">
-        <span>KRT PPR Pantai Ria Blok C &bull; Universiti Malaya WIX2001 &bull; </span>
-        <strong className="text-slate-700">Berhenti, Semak, Lapor (NSRC 997)</strong>
-      </footer>
     </div>
   );
 }
