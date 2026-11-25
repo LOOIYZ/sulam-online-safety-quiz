@@ -17,8 +17,9 @@ export function saveScoreToLeaderboard(entry) {
       id: Date.now().toString(),
       name: entry.name || 'Wira PPR',
       score: entry.score || 0,
-      total: entry.total || 12,
-      percentage: Math.round(((entry.score || 0) / (entry.total || 12)) * 100),
+      total: entry.total || 18,
+      timeSec: entry.timeSec || null,
+      percentage: Math.round(((entry.score || 0) / (entry.total || 18)) * 100),
       date: new Date().toLocaleDateString('ms-MY', {
         day: 'numeric',
         month: 'short',
@@ -28,9 +29,9 @@ export function saveScoreToLeaderboard(entry) {
       })
     };
     records.push(newEntry);
-    records.sort((a, b) => b.score - a.score || b.percentage - a.percentage);
-    // Keep top 20
-    const topRecords = records.slice(0, 20);
+    // Highest score first; when scores tie, the faster finish ranks higher
+    records.sort((a, b) => b.score - a.score || (a.timeSec ?? Infinity) - (b.timeSec ?? Infinity));
+    const topRecords = records.slice(0, 50);
     localStorage.setItem(LEADERBOARD_KEY, JSON.stringify(topRecords));
     return topRecords;
   } catch {
